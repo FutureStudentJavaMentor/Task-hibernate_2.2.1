@@ -31,7 +31,7 @@ public class UserServiceImp implements UserService {
     @Transactional
     @Override
     public User getCarUser(Car car) {
-       return userDao.getCarUser(car);
+        return userDao.getCarUser(car);
     }
 
 
