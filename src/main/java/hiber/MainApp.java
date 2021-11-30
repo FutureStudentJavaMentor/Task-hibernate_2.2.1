@@ -4,14 +4,13 @@ import hiber.config.AppConfig;
 import hiber.model.Car;
 import hiber.model.User;
 import hiber.service.UserService;
-import hiber.service.UserServiceImp;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.sql.SQLException;
 import java.util.List;
 
 public class MainApp {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException{
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(AppConfig.class);
 
@@ -34,7 +33,8 @@ public class MainApp {
             System.out.println("User Car - " + user.getCar());
         }
 
-      userService.getCarUser(userService.listUsers().get(5).getCar());
+        User user = userService.getCarUser("Mercedes-Benz", 1);
+        System.out.println(user);
         context.close();
     }
 }
