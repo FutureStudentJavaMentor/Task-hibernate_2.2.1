@@ -34,7 +34,7 @@ public class MainApp {
         }
 
         User user = userService.getCarUser("Mercedes-Benz", 1);
-        System.out.println(user);
+        System.out.println(user.toString());
         context.close();
     }
 }
