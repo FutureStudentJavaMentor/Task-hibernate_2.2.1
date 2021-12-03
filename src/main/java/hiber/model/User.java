@@ -17,7 +17,7 @@ public class User {
 
     private String lastName;
 
-   
+
     private String email;
 
     @Embedded
@@ -77,11 +77,11 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", car=" + car +
+                "id = " + id +
+                ", firstName = '" + firstName + '\'' +
+                ", lastName = '" + lastName + '\'' +
+                ", email = '" + email + '\'' +
+                ", car = " + car +
                 '}';
     }
 }
