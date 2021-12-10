@@ -2,20 +2,27 @@ package hiber.model;
 
 import javax.persistence.*;
 
-@Embeddable
+@Entity
+@Table(name = "car")
 public class Car {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long id;
+
+    @Column(name = "series")
     private int series;
 
+    @Column(name = "model")
     private String model;
-
 
 
     public Car() {
     }
 
-    public Car(String model) {
+    public Car(String model, int series) {
         this.model = model;
+        this.series = series;
     }
 
     public int getSeries() {
@@ -35,10 +42,10 @@ public class Car {
     }
 
 
-
     @Override
     public String toString() {
         return "Car { " +
+                "id = " + id + " " +
                 " model = " + model +
                 ", series = " + series + '}';
     }
